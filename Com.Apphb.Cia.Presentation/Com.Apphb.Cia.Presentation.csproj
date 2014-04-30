@@ -199,7 +199,11 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\pages\calendar.html" />
+    <Content Include="app\pages\classification.html" />
+    <Content Include="app\pages\contact.html" />
     <Content Include="app\pages\home.html" />
+    <Content Include="app\pages\info.html" />
     <Content Include="app\pages\rules.html" />
     <Content Include="app\pages\users.html" />
     <Content Include="app\script.js" />

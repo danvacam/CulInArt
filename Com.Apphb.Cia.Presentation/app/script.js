@@ -13,6 +13,26 @@ ciaApp.config(function ($routeProvider, $locationProvider) {
             templateUrl: 'app/pages/rules.html',
             controller: 'rulesController'
         })
+        // rules page route
+        .when('/classification', {
+            templateUrl: 'app/pages/classification.html',
+            controller: 'classificationController'
+        })
+        // users page route
+        .when('/calendar', {
+            templateUrl: 'app/pages/calendar.html',
+            controller: 'calendarController'
+        })
+        // users page route
+        .when('/contact', {
+            templateUrl: 'app/pages/contact.html',
+            controller: 'contactController'
+        })
+        // users page route
+        .when('/info', {
+            templateUrl: 'app/pages/info.html',
+            controller: 'infoController'
+        })
         // users page route
         .when('/users', {
             templateUrl: 'app/pages/users.html',
@@ -33,6 +53,30 @@ ciaApp.controller('mainController', function ($scope) {
 ciaApp.controller('rulesController', function ($scope) {
     // message to display in views
     $scope.message = 'Dan rulez!!';
+});
+
+// create the controller and inject Angular's $scope
+ciaApp.controller('classificationController', function ($scope) {
+    // message to display in views
+    $scope.message = 'Classifica';
+});
+
+// create the controller and inject Angular's $scope
+ciaApp.controller('calendarController', function ($scope) {
+    // message to display in views
+    $scope.message = 'Calendar here!!';
+});
+
+// create the controller and inject Angular's $scope
+ciaApp.controller('contactController', function ($scope) {
+    // message to display in views
+    $scope.message = 'Contact here!!';
+});
+
+// create the controller and inject Angular's $scope
+ciaApp.controller('infoController', function ($scope) {
+    // message to display in views
+    $scope.message = 'Info here!!';
 });
 
 // create the controller and inject Angular's $scope
