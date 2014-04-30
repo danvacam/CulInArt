@@ -1,0 +1,52 @@
+﻿html {
+    background: url("Images/mod_bg.jpg") fixed no-repeat center;
+    -ms-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -ms-background-origin: padding-box;
+    -moz-background-origin: padding-box;
+    -webkit-background-origin: padding-box;
+    background-origin: padding-box;
+    -ms-background-clip: border-box;
+    -moz-background-clip: border-box;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+}
+
+body {
+    height: 100%;
+    background-color: transparent;
+}
+
+/*
+ * Base structure
+ */
+
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
