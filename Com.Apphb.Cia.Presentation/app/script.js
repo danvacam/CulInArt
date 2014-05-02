@@ -34,6 +34,11 @@ ciaApp.config(function ($routeProvider, $locationProvider) {
             controller: 'infoController'
         })
         // users page route
+        .when('/recipes', {
+            templateUrl: 'app/pages/recipes.html',
+            controller: 'recipesController'
+        })
+        // users page route
         .when('/users', {
             templateUrl: 'app/pages/users.html',
             controller: 'usersController'
@@ -62,7 +67,12 @@ ciaApp.controller('classificationController', function ($scope) {
 });
 
 // create the controller and inject Angular's $scope
-ciaApp.controller('calendarController', function ($scope) {
+ciaApp.controller('calendarController', function ($scope, $location, $anchorScroll) {
+
+    $scope.scrollTo = function(id) {
+        $location.hash(id);
+        $anchorScroll();
+    };
     // message to display in views
     $scope.message = 'Calendar here!!';
 });
@@ -80,7 +90,21 @@ ciaApp.controller('infoController', function ($scope) {
 });
 
 // create the controller and inject Angular's $scope
+ciaApp.controller('recipesController', function ($scope) {
+    // message to display in views
+    $scope.message = 'Recipes here!!';
+});
+
+// create the controller and inject Angular's $scope
 ciaApp.controller('usersController', function ($scope) {
     // message to display in views
     $scope.message = 'Users here!!';
+});
+
+ciaApp.run(function ($rootScope, $location, $anchorScroll, $routeParams) {
+    //when the route is changed scroll to the proper element.
+    $rootScope.$on('$routeChangeSuccess', function (newRoute, oldRoute) {
+        $location.hash($routeParams.scrollTo);
+        $anchorScroll();
+    });
 });
